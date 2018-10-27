@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  background: $black url('images/pattern.png') 0 0 repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 0 auto;
+  background: rgba($black, .3);
+  background: linear-gradient(to bottom, $black 0%, transparent 50%, $black 100%)
+}
+
+h1 {
+  color: $white;
+  box-shadow: 0 1px 1px $black;
+  text-align: center;
+  font-size: 36px;
+}
