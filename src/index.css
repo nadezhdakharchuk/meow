@@ -32,13 +32,7 @@ body {
   background: -webkit-linear-gradient(top, #000000 0%, transparent 50%, #000000 100%);
   background: linear-gradient(to bottom, #000000 0%, transparent 50%, #000000 100%)
 }
-h1 {
-  color: #ffffff;
-  box-shadow: 0 1px 1px #000000;
-  text-align: center;
-  font-size: 36px;
-}
-.products-wrapper {
+.wrapper {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -47,26 +41,59 @@ h1 {
   -webkit-box-direction: normal;
           flex-direction: column;
 }
+h1 {
+  color: #ffffff;
+  box-shadow: 0 1px 1px #000000;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 36px;
+}
 .products {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   max-width: 1120px;
 }
-.product {
+.products__item {
+    width: 320px;
+    margin: 20px;
+  }
+.product-wrapper {
   position: relative;
-  width: 320px;
+  width: 100%;
   height: 480px;
   overflow: hidden;
-  margin: 20px;
   border-radius: 12px;
   background: #ffffff url('images/cat.png') -25px 205px no-repeat;
   -webkit-clip-path: polygon(45px 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 45px);
           clip-path: polygon(45px 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 45px);
 }
+.products-footer {
+  margin-top: 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+}
+.products-footer a {
+    color: #1698d9;
+    text-decoration: none;
+    border-bottom: 1px dashed #1698d9;
+  }
+.products-footer a:hover {
+      border-color: transparent;
+    }
+.product {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px;
+  border: solid 4px #1698d9;
+  border-radius: 12px;
+  cursor: pointer;
+}
 .product::after {
     position: absolute;
-    top: -34px;
+    top: -42px;
     left: -35px;
     width: 70px;
     height: 70px;
@@ -120,12 +147,5 @@ h1 {
   }
 .product__unit {
     font-size: 21px;
+    line-height: 12px;
   }
-.product-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 20px 50px;
-  border: solid 4px #1698d9;
-  border-radius: 12px;
-}

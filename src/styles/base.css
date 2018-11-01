@@ -28,9 +28,16 @@ body {
   background: linear-gradient(to bottom, $black 0%, transparent 50%, $black 100%)
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 h1 {
   color: $white;
   box-shadow: 0 1px 1px $black;
   text-align: center;
+  font-family: "Exo 2", sans-serif;
   font-size: 36px;
 }
